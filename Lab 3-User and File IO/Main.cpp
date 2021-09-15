@@ -2,12 +2,16 @@
 #include <cmath>
 #include <fstream>
 using namespace std;
-
+float findStandardDeviation(float* array, int count);
 int main()
 {
-	float val[4] = { 4.0, 6.0, 8.0, 9.0 };
-	float sum = 0.0, mean, variance = 0.0, stdDeviation;
+	int count, i;
+	float inputArray[500];
 
+
+	
+	
+	
 	ofstream myfile;
 	myfile.open("example.txt");
 	myfile << "will this work or not\n";
