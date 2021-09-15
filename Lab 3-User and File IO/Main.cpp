@@ -13,11 +13,11 @@ int main()
 	
 	
 	ofstream myfile;
-	myfile.open("example.txt");
+	myfile.open("inMeanStd.dat");
 	myfile << "will this work or not\n";
 	myfile.close();
 
-	myfile.open("example.txt", ios::out | ios::app | ios::binary);
+	myfile.open("inMeanStd.dat", ios::out | ios::app | ios::binary);
   if (myfile.is_open()) {/* ok, proceed with output */ }
 
 	return 0;
