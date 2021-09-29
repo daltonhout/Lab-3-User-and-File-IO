@@ -15,8 +15,9 @@ int main() {
 	infile.open("inMeanStd.dat");
 	outfile.open("outMeanStd.dat");
 
-	
-	
+	infile >> num1 >> num2 >> num3 >> num4;
+
+	infile.close();
 	
 	float val[4] = { 5, 8, 9, 2 };
 	float sum = 0.0, mean, variance = 0.0, stdDeviation;
@@ -36,6 +37,9 @@ int main() {
 	cout << "The mean of these values is: " << mean;
 
 	infile.close();
+	outfile << stdDeviation << endl;
+	outfile << mean << endl;
+
 	outfile.close();
 
 }
