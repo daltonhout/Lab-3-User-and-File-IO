@@ -66,7 +66,7 @@ int main() {
 
 	return 0;
 }
-
+// Calculating and returning mean and standard deviation
 float stdDeviation(float data[]) {
 	float sum = 0.0, mean, stdDeviation = 0.0;
 	int k;
