@@ -52,5 +52,41 @@ int main() {
 	outfile << mean << endl;
 	// Closing output file
 	outfile.close();
+
+
+	int k;
+	float data[4];
+	// User inputs values
+	cout << endl << "Enter 4 integers: ";
+	for (k = 0; k < 4; ++k) {
+		cin >> data[k];
+	}
+	cout << endl << "The mean of your numbers: " << endl << mean << endl;
+	cout << endl << "The standard deviation of your numbers: " << endl << stdDeviation << endl;
+
 	return 0;
+}
+
+float stdDeviation(float data[]) {
+	float sum = 0.0, mean, stdDeviation = 0.0;
+	int k;
+	for (k = 0; k < 4; ++k) {
+		sum += data[k];
+	}
+	mean = sum / 4;
+	for (k = 0; k < 4; ++k) {
+		stdDeviation += pow(data[k] - mean, 2);
+	}
+	return sqrt(stdDeviation / 4);
+}
+
+float mean(float data[]) {
+	float sum = 0.0, mean;
+	int k;
+	for (k = 0; k < 4; ++k) {
+		sum += data[k];
+	}
+	mean = sum / 4;
+
+	return mean;
 }
